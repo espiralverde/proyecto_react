@@ -1,10 +1,9 @@
-import {Container} from 'react-bootstrap/Container'
-import {Nav} from 'react-bootstrap/Nav'
-import {Navbar} from 'react-bootstrap/Navbar'
-import {NavDropdown} from 'react-bootstrap/NavDropdown'
+import {Container} from 'react-bootstrap'
+import {Nav} from 'react-bootstrap'
+import {Navbar} from 'react-bootstrap'
+import {NavDropdown} from 'react-bootstrap'
 
-
-const NavBar =() => {
+const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
