@@ -1,9 +1,9 @@
+import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import CartWidget from '../CartWidget/CartWidget'
 
-// import Container from 'react-bootstrap/Container'
-// import Nav from 'react-bootstrap/Nav'
-// import Navbar from 'react-bootstrap/Navbar'
-// import NavDropdown from 'react-bootstrap/NavDropdown'
+
+
 
 const NavBar = () => {
     return (
@@ -13,25 +13,24 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Catálogo</Nav.Link>
-                        <Nav.Link href="#pricing">Insumos</Nav.Link>
+                        <Nav.Link href="#Catalogo">Catálogo</Nav.Link>
+                        <Nav.Link href="#Insumos">Insumos</Nav.Link>
                         <NavDropdown title="Herramientas" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Batería</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Eléctricas</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Neumáticas</NavDropdown.Item>
+                            <NavDropdown.Item href="#Bateria">Batería</NavDropdown.Item>
+                            <NavDropdown.Item href="#Electricas">Eléctricas</NavDropdown.Item>
+                            <NavDropdown.Item href="#Neumaticas">Neumáticas</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Manuales</NavDropdown.Item>
+                            <NavDropdown.Item href="#Manuales">Manuales</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    {/* <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
-                    </Nav> */}
+                    {
+
+                    }
                 </Navbar.Collapse>
+                <CartWidget />
             </Container>
         </Navbar>
+        
         )
 }
 export default NavBar
