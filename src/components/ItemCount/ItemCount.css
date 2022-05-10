@@ -1,0 +1,51 @@
+.itemCount__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.itemCount__btnMenos {
+    border: none;
+    background: rgb(37,130,173);
+    width: 30px;
+    padding-bottom: 0.4rem;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    margin-right: 1rem;
+}
+.itemCount__btnMas {
+    border: none;
+    background: rgb(37,130,173);
+    width: 30px;
+    padding-bottom: 0.4rem;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    margin-left: 1rem;
+}
+.itemCount__cantidad {
+    font-size: 1rem;
+    padding: 0 3rem
+}
+.itemCount__agregarCarrito {
+    border: none;
+    background: rgb(37,130,173);
+    border-radius: 0%;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    padding:  0.4rem 3rem
+}
+.itemCount__container__controles{
+margin-bottom: 30px;
+justify-content: center;
+align-items: center;
+}
+
+.itemCount__container__agregar{
+    justify-content: center;
+    align-items: center;
+    }

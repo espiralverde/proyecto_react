@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './components/NavBar/NavBar';
-//import { Formulario } from './components/Formulario/Formulario';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 
 
 function App() {
-  // const tit = 'Soy titulo de App'
-  // const subTit = 'Soy sub-titulo de App'
+  
+  const [count, setCount] = useState (0) 
+
+  function contador () {
+  setCount(count + 1)
+}
 
   return (
-    
     <div className="App">
       e-commerce App
       <NavBar />
-      {/* <ItemListContainer  /> */}
       <ItemListContainer greeting={'Bienvenidos a SteelBit'}/>
       <input placeholder='Buscá tu herramienta'></input>
-      <button>Buscar</button>
+      {count}
+      <button onClick={contador}>Cantidad de busquedas</button>
+      
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
+      <ItemCount stock='5' initial='1' />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavBar.css';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
 
