@@ -30,7 +30,7 @@ function ItemCount ({stock, initial, onAdd}) {
                 <button className="itemCount__btnMas" onClick={sumar}>+</button>
             </div>
             <div className="itemCount__container__agregar">
-                <button className="itemCount__agregarCarrito"  onClick={onAdd}>Agregar</button>
+                <button className="itemCount__agregarCarrito"  onClick={agregarCarrito}>Agregar</button>
             </div>
         </div>
         )
