@@ -1,16 +1,14 @@
 import { Item } from "../Item/Item"
 
-
-
 export const ItemList = ({productos}) => {
 
     return (
-        <ul className='ItemList'>
+        <div className='ItemList'>
             {
-                productos.map (prod => {
-                    return <Item productos={prod} />
+                    productos.map (prod => {
+                    return <Item key={prod.id} productos={prod} />
                 })
             }
-        </ul>
+        </div>
     )
 }

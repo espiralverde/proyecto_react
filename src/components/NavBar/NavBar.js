@@ -1,21 +1,21 @@
 import React from 'react';
 import './NavBar.css';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
-
-
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">SteelBit</Navbar.Brand>
+            <Link to ="/">SteelBit</Link>
+            {/* <Navbar.Brand href="#home">SteelBit</Navbar.Brand> */}
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#Catalogo">Catálogo</Nav.Link>
-                        <Nav.Link href="#Insumos">Insumos</Nav.Link>
+                        <Link to ="/categoria/catalogo">Catálogo</Link>
+                        <Link to ="/categoria/insumos" >Insumos</Link>
                         <NavDropdown title="Herramientas" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#Bateria">Batería</NavDropdown.Item>
                             <NavDropdown.Item href="#Electricas">Eléctricas</NavDropdown.Item>
