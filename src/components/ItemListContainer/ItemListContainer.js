@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import { getFetch } from "../../helpers/getFetch"
 import ItemCount from "../ItemCount/ItemCount"
 
-export const ItemListContainer = ({greeting='mensaje default'}) => {
+export const ItemListContainer = ({greeting='Esto es Item List Container'}) => {
 
     const[productos, setProductos] = useState([])
     const[loading, setLoading] = useState(true)
@@ -38,7 +38,7 @@ return (
         :
         <ItemList productos={productos} />
         }
-        <ItemCount initial={1} stock={5} onAdd={onAdd} />
+        {/* <ItemCount initial={1} stock={5} onAdd={onAdd} /> */}
     </div>
     
     

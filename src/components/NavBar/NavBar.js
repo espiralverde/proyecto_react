@@ -1,37 +1,28 @@
 import React from 'react';
 import './NavBar.css';
-import { Container, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap'
+import { Container, Nav, Navbar} from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
             <Container>
-            <Link to ="/">SteelBit</Link>
-            {/* <Navbar.Brand href="#home">SteelBit</Navbar.Brand> */}
+            <Link to ="/">
+                <img className='logoNav' src='./img/Hamilton.png' size='1x' alt='foto logo'></img>
+            </Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Link to ="/categoria/catalogo">Catálogo</Link>
-                        <Link to ="/categoria/insumos" >Insumos</Link>
-                        <NavDropdown title="Herramientas" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#Bateria">Batería</NavDropdown.Item>
-                            <NavDropdown.Item href="#Electricas">Eléctricas</NavDropdown.Item>
-                            <NavDropdown.Item href="#Neumaticas">Neumáticas</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#Manuales">Manuales</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    {
-
-                    }
-                </Navbar.Collapse>
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <NavLink to = "/categ/insumos" className='menuNavItem'>Insumos</NavLink>
+                            <NavLink to = "/categ/bateria" className='menuNavItem'>Batería</NavLink>
+                            <NavLink to = "/categ/electrica" className='menuNavItem'>Eléctrica</NavLink>
+                        </Nav>
+                    </Navbar.Collapse>
                 <CartWidget />
             </Container>
         </Navbar>
-        
         )
 }
 export default NavBar
