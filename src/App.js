@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {Cart} from './components/Cart/Cart';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   const [count, setCount] = useState (0) 
@@ -25,8 +26,8 @@ function App() {
             <Route path = "/detalle/:detalleId" element  = { <ItemDetailContainer /> } />
             <Route path = "/cart" element  = { <Cart /> } />
             <Route path = "/*" element  = { <Navigate to ='/' replace /> } />
-              {/* <ItemCount stock='5' initial='1' /> */}
           </Routes>
+          {/* <ItemCount stock='5' initial='1' /> */}
       </div>
     </BrowserRouter>
   );

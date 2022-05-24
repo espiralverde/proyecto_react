@@ -15,10 +15,6 @@ function ItemCount ({stock, initial, onAdd}) {
         else (alert ("No hay mas elementos para quitar"))
     }
 
-    // function agregarCarrito (){
-    //     onAdd(cantidad)
-    // }
-
     return (
         <div className="itemCount__container">
             <div className="itemCount__container__controles">
@@ -27,12 +23,9 @@ function ItemCount ({stock, initial, onAdd}) {
                 <button className="itemCount__btnMas" onClick={sumar}>+</button>
             </div>
             <div className="itemCount__container__agregar">
-                <button className="itemCount__agregarCarrito"  onClick={()=> onAdd(cantidad)}>Agregar</button>
+                <button className="itemCount__agregarCarrito" onClick={()=> onAdd(cantidad)}>Agregar al carrito</button>
             </div>
         </div>
         )
-
-
 }
-
 export default ItemCount

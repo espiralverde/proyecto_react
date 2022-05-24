@@ -1,10 +1,18 @@
-//import { Item } from "../Item/Item"
+import { useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+
 import './ItemDetail.css';
+import { Link } from "react-router-dom";
+import Intercambiabilidad from './Intercambiabilidad';
+
 
 export const ItemDetail = ({productos}) => {
 
-    
+    // const [cantidad, setCantidad] = useState ()  //count, estado
 
+    function onAdd (){
+    //console.log(cantidad)
+    } 
     return (
         
         <div className="row" >
@@ -17,9 +25,12 @@ export const ItemDetail = ({productos}) => {
                 <h2>{productos.codigo}</h2>
                 <p>{productos.precio}</p>
                 <p>{productos.tamanio}</p>
+                <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                <Intercambiabilidad />
             </div>        
         </div>
-        //<Item prod={productos} />
     )
 }
+
+
 export default ItemDetail
