@@ -8,11 +8,13 @@ import Intercambiabilidad from './Intercambiabilidad';
 
 export const ItemDetail = ({productos}) => {
 
-    // const [cantidad, setCantidad] = useState ()  //count, estado
+    const [qty, setQty] = useState (0)
 
-    function onAdd (){
-    //console.log(cantidad)
-    } 
+    function onAdd (cantidad){
+        console.log(cantidad)
+        setQty (cantidad)
+    }
+
     return (
         
         <div className="row" >
@@ -25,8 +27,14 @@ export const ItemDetail = ({productos}) => {
                 <h2>{productos.codigo}</h2>
                 <p>{productos.precio}</p>
                 <p>{productos.tamanio}</p>
-                <ItemCount initial={1} stock={5} onAdd={onAdd} />
-                <Intercambiabilidad />
+
+                {
+                    qty == 0
+                    ? 
+                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                    :
+                    <Intercambiabilidad />
+                }
             </div>        
         </div>
     )

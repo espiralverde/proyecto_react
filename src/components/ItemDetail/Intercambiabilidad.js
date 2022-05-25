@@ -28,7 +28,7 @@ const ButtonCount= ({handleInter})=> {
     return <button 
                 className="btn btn-outline-success" 
                 onClick={handleInter}
-            >Agregar Al carrito</button>
+            >Agregar Al Carrito</button>
 
 }
 
@@ -39,18 +39,15 @@ const Intercambiabilidad = () => {
     const handleInter=()=>{
         setInputType('input')
     }
-    
+        
     return (
-        <div>
-            <h2>Item Description</h2>
-            
+        <div>        
             {
                 inputType === 'button' ? 
-                    <ButtonCount handleInter={handleInter} />
+                <ButtonCount handleInter={handleInter} />
                 : 
-                    <InputCount />
+                <InputCount />
             }
-             {/* <Count onConfirm={addToCart} maxQuantity={itemMax} />  */}
         </div>
     )
 }
