@@ -1,19 +1,26 @@
 import { useState } from 'react';
+//import Intercambiabilidad from './Intercambiabilidad';
 import ItemCount from '../ItemCount/ItemCount';
+import {useCartContext} from '../../context/CartContext'
+
 
 import './ItemDetail.css';
-import { Link } from "react-router-dom";
-import Intercambiabilidad from './Intercambiabilidad';
-
+import InputCount from './Intercambiabilidad';
 
 export const ItemDetail = ({productos}) => {
 
-    const [qty, setQty] = useState (0)
+    const {addToCart, cartList} = useCartContext()
+    const [cantUI, setCantUI] = useState(0)
 
-    function onAdd (cantidad){
-        console.log(cantidad)
-        setQty (cantidad)
+    const onAdd = (cantidad) =>{
+        //console.log(cantidad)
+        addToCart ( {...productos, cantidad} )
+        setCantUI(cantidad)
+        //para seguir agregando en el carrito
     }
+    console.log(cartList)
+
+    
 
     return (
         
@@ -29,16 +36,14 @@ export const ItemDetail = ({productos}) => {
                 <p>{productos.tamanio}</p>
 
                 {
-                    qty == 0
+                    cantUI === 0
                     ? 
                     <ItemCount initial={1} stock={5} onAdd={onAdd} />
                     :
-                    <Intercambiabilidad />
+                    <InputCount />
                 }
             </div>        
         </div>
     )
 }
-
-
 export default ItemDetail

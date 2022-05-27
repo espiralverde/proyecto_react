@@ -3,11 +3,14 @@ import './NavBar.css';
 import { Container, Nav, Navbar} from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 
 const NavBar = () => {
+
+    const {cantidadTotal} = useCartContext()
     return (
-        <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="warning" variant="dark">
             <Container>
             <Link to ="/">
                 <img className='logoNav' src='./img/Hamilton.png' size='1x' alt='foto logo'></img>
@@ -20,6 +23,7 @@ const NavBar = () => {
                             <NavLink to = "/categ/electrica" className='menuNavItem'>Eléctrica</NavLink>
                         </Nav>
                     </Navbar.Collapse>
+                    {cantidadTotal() !== 0 && cantidadTotal()}
                 <CartWidget />
             </Container>
         </Navbar>

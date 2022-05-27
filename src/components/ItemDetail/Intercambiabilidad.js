@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -10,7 +9,7 @@ const InputCount= ()=> {
             <button 
                 className="btn btn-outline-primary" 
                 onClick={()=>console.log('ir a cart') } 
-            >Ir al Cart o Terminar compra</button>
+            >Ir al Carrito</button>
         </Link>
         <Link to='/' >
             <button 
@@ -22,34 +21,32 @@ const InputCount= ()=> {
     )
 }
 
+export default InputCount
 
+// const ButtonCount= ({handleInter})=> {
+//     return <button className="btn btn-outline-success" onClick={handleInter}>Agregar Al Carrito</button>
+// }
 
-const ButtonCount= ({handleInter})=> {
-    return <button 
-                className="btn btn-outline-success" 
-                onClick={handleInter}
-            >Agregar Al Carrito</button>
+// const Intercambiabilidad = () => {
 
-}
+//     const [inputType, setInputType ] = useState('button')
+    
 
-const Intercambiabilidad = () => {
-
-    const [inputType, setInputType ] = useState('button')
-
-    const handleInter=()=>{
-        setInputType('input')
-    }
+//     const handleInter=()=>{
+//         setInputType('input')
+//     }
         
-    return (
-        <div>        
-            {
-                inputType === 'button' ? 
-                <ButtonCount handleInter={handleInter} />
-                : 
-                <InputCount />
-            }
-        </div>
-    )
-}
+//     return (
+//         <div>        
+//             {
+//                 inputType === 'button' ? 
+//                 <ButtonCount handleInter={handleInter} />
+//                 : 
+//                 <InputCount />
+//             }
+//         </div>
+//     )
+// }
 
-export default Intercambiabilidad
+//export default Intercambiabilidad
+
