@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ItemList } from "../ItemList/ItemList"
+import  {ItemList}  from "../ItemList/ItemList"
 
 import { useParams } from "react-router-dom"
 import { getFetch } from "../../helpers/getFetch"
@@ -34,7 +34,7 @@ return (
         {greeting}
 
         { loading ?
-        <h2> Cargando... </h2>
+        <h2> Cargando... </h2> //acá puede ir un spinner
         :
         <ItemList productos={productos} />
         }

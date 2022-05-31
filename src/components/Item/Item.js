@@ -3,7 +3,6 @@ import '../Item/Item.css'
 
 
 export const Item = ({productos}) => {
-    //console.log (productos)
 
     return (
         <div className='col-md-10 w-25'>
