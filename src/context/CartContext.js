@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import React from 'react'
 
 const CartContext = createContext([])
 
@@ -14,7 +15,7 @@ const CartContextProvider = ({children}) =>{
         const index = cartList.findIndex(product => product.id === item.id) //pone -1 si no lo encuentra
         if (index !== -1){
             const cantidadVieja = cartList[index].cantidad
-            cartList[index].cantidad += cantidadVieja
+            cartList[index].cantidad = cantidadVieja + item.cantidad
             setCartList([...cartList])
         }else {
             setCartList ([

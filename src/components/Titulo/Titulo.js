@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Titulo ({ titulo, subTit='Subtítulo' }) {
     console.log(titulo)
 return (

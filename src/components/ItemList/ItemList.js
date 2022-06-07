@@ -1,19 +1,6 @@
-import { memo } from "react"
 import  {Item}  from "../Item/Item"
-
+import React from 'react'
 import '../ItemList/ItemList.css'
-
-
-//memo (componente)
-
-// const ItemList = memo (({productos}) => {
-//     console.log('ItemList')
-//     return (
-//         productos.map ((prod) => <Item key={prod.id} prod={prod}/>)
-//     )
-//     }
-// )
-// export default ItemList
 
 export const ItemList = ({productos}) => {
     return (
@@ -26,3 +13,5 @@ export const ItemList = ({productos}) => {
         </div>
     )
 }
+
+export default ItemList

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
-
+import React from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';

@@ -2,6 +2,7 @@ import { useState } from 'react';
 //import Intercambiabilidad from './Intercambiabilidad';
 import ItemCount from '../ItemCount/ItemCount';
 import {useCartContext} from '../../context/CartContext'
+import React from 'react'
 
 
 import './ItemDetail.css';

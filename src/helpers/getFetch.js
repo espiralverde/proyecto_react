@@ -35,7 +35,7 @@ const productos = [
         "tamanio" : "Discos 115 mm. (4-1/2”)",
         "cantidad" : 10,
         "codigo" : "ULT115",
-        "precio" : 1000,
+        "precio" : 10000,
         "img" : "../img/ULT115.jpg",
         "categoria" : "bateria"
     },
@@ -45,7 +45,7 @@ const productos = [
         "tamanio" : "Para discos 165 mm (max)",
         "cantidad" : 10,
         "codigo" : "ULT11",
-        "precio" : 1000,
+        "precio" : 10000,
         "img" : "../img/ULT117.jpg",
         "categoria" : "bateria"
     },
@@ -55,7 +55,7 @@ const productos = [
         "tamanio" : "Embrague de 16+3 posiciones",
         "cantidad" : 10,
         "codigo" : "ULT111",
-        "precio" : 1000,
+        "precio" : 10000,
         "img" : "../img/ULT111.jpg",
         "categoria" : "bateria"
     },
@@ -65,7 +65,7 @@ const productos = [
         "tamanio" : "Discos 115 mm.",
         "cantidad" : 10,
         "codigo" : "HAA001",
-        "precio" : 1000,
+        "precio" : 10000,
         "img" : "../img/HAA001.jpg",
         "categoria" : "electrica"
     },
@@ -75,7 +75,7 @@ const productos = [
         "tamanio" : "Grapas: Tipo 53 (8/16 mm.)",
         "cantidad" : 10,
         "codigo" : "HEE001",
-        "precio" : 1000,
+        "precio" : 5000,
         "img" : "../img/HEE001.jpg",
         "categoria" : "electrica"
     },
@@ -85,7 +85,7 @@ const productos = [
         "tamanio" : "Base de 125 mm",
         "cantidad" : 10,
         "codigo" : "HLR001",
-        "precio" : 1000,
+        "precio" : 15000,
         "img" : "../img/HLR001.jpg",
         "categoria" : "electrica"
     },
