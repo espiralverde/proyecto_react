@@ -14,7 +14,6 @@ export const ItemDetail = ({productos}) => {
     const [cantUI, setCantUI] = useState(0)
 
     const onAdd = (cantidad) =>{
-        //console.log(cantidad)
         addToCart ( {...productos, cantidad} )
         setCantUI(cantidad)
         //para seguir agregando en el carrito
@@ -26,15 +25,15 @@ export const ItemDetail = ({productos}) => {
     return (
         
         <div className="row" >
-            <p>Item detail</p>
+            <p>Detalle de Producto</p>
             <div className="col">
                 <img className="foto_detalle" src={productos.img} alt="foto herramienta" />
             </div>
             <div className="col">
                 <h1>{productos.nombre}</h1>
-                <h2>{productos.codigo}</h2>
-                <p>{productos.precio}</p>
-                <p>{productos.tamanio}</p>
+                <h4>Código: {productos.codigo}</h4>
+                <p>Precio: ${productos.precio}</p>
+                <p>Tamaño: {productos.tamanio}</p>
 
                 {
                     cantUI === 0

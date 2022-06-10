@@ -1,5 +1,4 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-//import {} from '@fortawesome/free-regular-svg-icons'
 import {faCartShopping } from '@fortawesome/free-solid-svg-icons/faCartShopping';
 import { Link } from 'react-router-dom';
 import React from 'react'

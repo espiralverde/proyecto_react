@@ -20,7 +20,7 @@ orden.items = cartList.map(cartItem => {
     const id = cartItem.id
     const nombre = cartItem.nombre
     const precio = cartItem.precio * cartItem.cantidad
-    // const cantidad = cartItem.cantidad
+    const cantidad = cartItem.cantidad
     
     return {id, nombre, precio}   
 })   
