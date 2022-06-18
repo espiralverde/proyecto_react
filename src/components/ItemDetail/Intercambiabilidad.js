@@ -8,14 +8,12 @@ const InputCount= ()=> {
         <>
         <Link to='/cart' >
             <button 
-                className="btn btn-outline-primary" 
-                onClick={()=>console.log('ir a cart') } 
+                className="btn btn-outline-primary mb-5 mx-2" 
             >Ir al Carrito</button>
         </Link>
         <Link to='/' >
             <button 
-                className="btn btn-outline-primary" 
-                onClick={()=>console.log('ir al home') } 
+                className="btn btn-outline-primary mb-5" 
             >Seguir comprando</button>
         </Link>
         </>
@@ -23,31 +21,3 @@ const InputCount= ()=> {
 }
 
 export default InputCount
-
-// const ButtonCount= ({handleInter})=> {
-//     return <button className="btn btn-outline-success" onClick={handleInter}>Agregar Al Carrito</button>
-// }
-
-// const Intercambiabilidad = () => {
-
-//     const [inputType, setInputType ] = useState('button')
-    
-
-//     const handleInter=()=>{
-//         setInputType('input')
-//     }
-        
-//     return (
-//         <div>        
-//             {
-//                 inputType === 'button' ? 
-//                 <ButtonCount handleInter={handleInter} />
-//                 : 
-//                 <InputCount />
-//             }
-//         </div>
-//     )
-// }
-
-//export default Intercambiabilidad
-

@@ -1,49 +1,40 @@
+import React from 'react'
 import { useState } from 'react';
-//import Intercambiabilidad from './Intercambiabilidad';
 import ItemCount from '../ItemCount/ItemCount';
 import {useCartContext} from '../../context/CartContext'
-import React from 'react'
-
-
-import './ItemDetail.css';
 import InputCount from './Intercambiabilidad';
+import './ItemDetail.css';
+
 
 export const ItemDetail = ({productos}) => {
-
     const {addToCart, cartList} = useCartContext()
     const [cantUI, setCantUI] = useState(0)
-
     const onAdd = (cantidad) =>{
         addToCart ( {...productos, cantidad} )
         setCantUI(cantidad)
-        //para seguir agregando en el carrito
+        //para seguir agregando items en el carrito
     }
-    console.log(cartList)
-
-    
 
     return (
-        
-        <div className="row" >
-            <p>Detalle de Producto</p>
-            <div className="col">
-                <img className="foto_detalle" src={productos.img} alt="foto herramienta" />
-            </div>
-            <div className="col">
-                <h1>{productos.nombre}</h1>
-                <h4>Código: {productos.codigo}</h4>
-                <p>Precio: ${productos.precio}</p>
-                <p>Tamaño: {productos.tamanio}</p>
 
-                {
-                    cantUI === 0
-                    ? 
-                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
-                    :
-                    <InputCount />
-                }
-            </div>        
-        </div>
+                        <div className="itemDetail">
+                            <div className='itemDetail__info'>
+                                <img className="itemDetail__img" src={productos.img} alt="" />
+                                <h3 className="itemDetail__title">{productos.nombre}</h3>
+                                <p className="itemDetail__detail">Código: {productos.codigo}</p>
+                                <p className="itemDetail__detail">Precio: ${productos.precio}</p>
+                                <p className="itemDetail__detail">Tamaño: {productos.tamanio}</p>
+                                {
+                                    cantUI === 0
+                                    ? 
+                                    <ItemCount initial={1} stock={100} onAdd={onAdd} />
+                                    :
+                                    <InputCount />
+                                }
+                            </div>
+                        </div>
     )
 }
 export default ItemDetail
+
+

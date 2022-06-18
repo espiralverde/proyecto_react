@@ -10,7 +10,7 @@ const NavBar = () => {
 
     const {cantidadTotal} = useCartContext()
     return (
-        <Navbar collapseOnSelect expand="lg" bg="warning" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
             <Container>
             <Link to ="/">
                 <img className='logoNav' src='./img/Hamilton.png' size='1x' alt='foto logo'></img>
@@ -20,10 +20,13 @@ const NavBar = () => {
                         <Nav className="me-auto">
                             <NavLink to = "/categ/insumos" className='menuNavItem'>Insumos</NavLink>
                             <NavLink to = "/categ/bateria" className='menuNavItem'>Batería</NavLink>
-                            <NavLink to = "/categ/electrica" className='menuNavItem'>Eléctrica</NavLink>
+                            <NavLink to = "/categ/electrica" className='menuNavItem'>Eléctricas</NavLink>
                         </Nav>
                     </Navbar.Collapse>
-                    {cantidadTotal() !== 0 && cantidadTotal()}
+                    <div style={{color: "white"}}>
+                        {cantidadTotal() !== 0 && cantidadTotal() }
+                    </div>
+                    
                 <CartWidget />
             </Container>
         </Navbar>

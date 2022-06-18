@@ -1,0 +1,25 @@
+.itemDetail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    padding: 20px 20px;
+}
+.itemDetail__img {
+    width: 100%;
+}
+.itemDetail__info {
+    width: 50%;
+    background-color: gainsboro;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+.itemDetail__title {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+.itemDetail__detail {
+    margin: 0.5rem;
+}
