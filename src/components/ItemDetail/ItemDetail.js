@@ -6,12 +6,12 @@ import InputCount from './Intercambiabilidad';
 import './ItemDetail.css';
 
 
-export const ItemDetail = ({productos}) => {
+export const ItemDetail = ({products}) => {
     const {addToCart, cartList} = useCartContext()
     const [cantUI, setCantUI] = useState(0)
-    const onAdd = (cantidad) =>{
-        addToCart ( {...productos, cantidad} )
-        setCantUI(cantidad)
+    const onAdd = (qty) =>{
+        addToCart ( {...products, qty} )
+        setCantUI(qty)
         //para seguir agregando items en el carrito
     }
 
@@ -19,11 +19,11 @@ export const ItemDetail = ({productos}) => {
 
                         <div className="itemDetail">
                             <div className='itemDetail__info'>
-                                <img className="itemDetail__img" src={productos.img} alt="" />
-                                <h3 className="itemDetail__title">{productos.nombre}</h3>
-                                <p className="itemDetail__detail">Código: {productos.codigo}</p>
-                                <p className="itemDetail__detail">Precio: ${productos.precio}</p>
-                                <p className="itemDetail__detail">Tamaño: {productos.tamanio}</p>
+                                <img className="itemDetail__img" src={products.img} alt="" />
+                                <h3 className="itemDetail__title">{products.name}</h3>
+                                <p className="itemDetail__detail">Código: {products.code}</p>
+                                <p className="itemDetail__detail">Precio: ${products.price}</p>
+                                <p className="itemDetail__detail">Tamaño: {products.size}</p>
                                 {
                                     cantUI === 0
                                     ? 

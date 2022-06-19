@@ -14,8 +14,8 @@ const CartContextProvider = ({children}) =>{
     function addToCart (item) {
         const index = cartList.findIndex(product => product.id === item.id) //pone -1 si no lo encuentra
         if (index !== -1){
-            const cantidadVieja = cartList[index].cantidad
-            cartList[index].cantidad = cantidadVieja + item.cantidad
+            const oldQty = cartList[index].qty
+            cartList[index].qty = oldQty + item.qty
             setCartList([...cartList])
         }else {
             setCartList ([
@@ -29,17 +29,17 @@ const CartContextProvider = ({children}) =>{
         setCartList(cartList.filter(prod => prod.id !== id))
     }
 
-    const cantidadTotal = () => {
-        return cartList.reduce((contador, prod)=> contador += prod.cantidad ,0)
+    const totalQty = () => {
+        return cartList.reduce((contador, prod)=> contador += prod.qty ,0)
 
     }
 
-    const precioTotal = () => {
-        return cartList.reduce((contador, prod)=> contador + (prod.cantidad * prod.precio) ,0)
+    const totalPrice = () => {
+        return cartList.reduce((contador, prod)=> contador + (prod.qty * prod.price) ,0)
 
     }
 
-    const vaciarCarrito = () => {
+    const emptyCart = () => {
         setCartList([])
     }
 
@@ -47,10 +47,10 @@ const CartContextProvider = ({children}) =>{
         <CartContext.Provider value = { {
             cartList,
             addToCart,
-            vaciarCarrito,
+            emptyCart,
             removeItem,
-            cantidadTotal,
-            precioTotal
+            totalQty,
+            totalPrice
             } }>
             {children}
         </CartContext.Provider>

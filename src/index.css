@@ -1,8 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 #root {
 background-color: #e0e6e9};
 
+footer {
+    margin-top: auto;
+    background-color: #343c44;
+    text-align: center;
+}
+
+/* e0e6e9 */

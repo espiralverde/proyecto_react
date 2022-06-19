@@ -4,7 +4,7 @@ import { useCartContext } from "../../context/CartContext"
 import { addDoc, collection, doc, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore"
 
 const Cart = () => {
-    const {cartList, vaciarCarrito, precioTotal, removeItem} = useCartContext()
+    const {cartList, emptyCart, totalPrice, removeItem} = useCartContext()
     const [dataForm, setDataForm] = useState({ email: '', phone: '', name:'' })
 
 async function generarOrden(e) {
@@ -12,15 +12,15 @@ async function generarOrden(e) {
 
     let orden = {}  
     orden.buyer = dataForm
-    orden.total = precioTotal()
+    orden.total = totalPrice()
 
     orden.items = cartList.map(cartItem => {
         const id = cartItem.id
-        const nombre = cartItem.nombre
-        const precio = cartItem.precio * cartItem.cantidad
-        const cantidad = cartItem.cantidad
+        const name = cartItem.name
+        const price = cartItem.price * cartItem.qty
+        const qty = cartItem.qty
         
-        return {id, nombre, precio}   
+        return {id, name, price, qty}   
     })   
 
 // crear
@@ -29,7 +29,7 @@ async function generarOrden(e) {
     addDoc(queryCollection, orden)
     .then(resp => console.log(resp))
     .catch(err => console.log(err))
-    .finally(()=> vaciarCarrito())
+    .finally(()=> emptyCart())
 
 
 // actualizar el stock
@@ -42,7 +42,7 @@ async function generarOrden(e) {
 
     await getDocs(queryActulizarStock)
     .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
-            stock: res.data().stock - cartList.find(item => item.id === res.id).cantidad
+            stock: res.data().stock - cartList.find(item => item.id === res.id).qty
     }) ))
     .finally(()=> console.log('actulalizado'))
     batch.commit()
@@ -69,13 +69,13 @@ return (
                 {cartList.map(product =>    <div key={product.id} >
                                                 <li >
                                                     <img src={product.img} style={{width: 60}} />
-                                                    {product.nombre} - Precio: {product.precio} - Cantidad: {product.cantidad}
+                                                    {product.name} - Precio: {product.price} - Cantidad: {product.qty}
                                                     {' '}
                                                     <button className='btn btn-outline-primary' onClick={()=> removeItem(product.id)}> X </button> 
                                                 </li>
                                             </div>)}
-                <h2>El precio total es: {precioTotal()}</h2>
-                <button onClick={vaciarCarrito} className='btn btn-outline-danger'>Vaciar carrito</button>
+                <h2>El precio total es: {totalPrice()}</h2>
+                <button onClick={emptyCart} className='btn btn-outline-danger'>Vaciar carrito</button>
             </>
         }
 

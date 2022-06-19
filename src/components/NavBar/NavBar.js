@@ -8,7 +8,7 @@ import { useCartContext } from '../../context/CartContext';
 
 const NavBar = () => {
 
-    const {cantidadTotal} = useCartContext()
+    const {totalQty} = useCartContext()
     return (
         <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
             <Container>
@@ -24,7 +24,7 @@ const NavBar = () => {
                         </Nav>
                     </Navbar.Collapse>
                     <div style={{color: "white"}}>
-                        {cantidadTotal() !== 0 && cantidadTotal() }
+                        {totalQty() !== 0 && totalQty() }
                     </div>
                     
                 <CartWidget />
