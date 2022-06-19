@@ -1,3 +1,25 @@
+# SteelBit e-commerce
+
+## Site
+
+https://bejewelled-puffpuff-769d60.netlify.app/
+
+## Tech
+
+- [AngularJS]
+- [Bootstrap]
+- [Firebase]
+- [JavaScript]
+
+## License
+
+MIT
+
+[angularjs]: http://angularjs.org
+[bootstrap]: https://getbootstrap.com/
+[javascript]: https://www.javascript.com/
+[firebase]: https://firebase.google.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
