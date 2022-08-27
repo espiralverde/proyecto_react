@@ -6,7 +6,7 @@ https://bejewelled-puffpuff-769d60.netlify.app/
 
 ## Tech
 
-- [AngularJS]
+- [ReactJS]
 - [Bootstrap]
 - [Firebase]
 - [JavaScript]
